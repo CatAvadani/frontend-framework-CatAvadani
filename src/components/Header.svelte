@@ -2,7 +2,7 @@
     header {
       width: 100%;
       height: 6rem;
-      background-color: #161515;
+      background-color: black;
       display: flex;
       justify-content: center;
       align-items: center;
