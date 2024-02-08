@@ -1,11 +1,8 @@
 <style>
     header {
-      position: fixed;
       width: 100%;
-      top: 0%;
-      left: 0%;
       height: 6rem;
-      background-color: #333;
+      background-color: #161515;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -6,11 +6,11 @@
   
   <style>
     footer {
-      /* Add your footer styles here */
       padding: 20px;
-      background-color: #333;
+      background-color: #161515;
       color: white;
       text-align: center;
+    
     }
   </style>
   

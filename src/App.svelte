@@ -4,6 +4,7 @@
   import Main from "./components/Main.svelte";
 </script>
 
+
 <Header />
 <Main />
 <Footer />
