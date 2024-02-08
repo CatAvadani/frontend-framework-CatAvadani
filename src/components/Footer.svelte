@@ -37,17 +37,17 @@
 
 button {
   padding: 5px 8px;
-  border: none;
+  border: solid 1px  #ffe589;
   border-radius: 5px;
-  background-color: #ffe589;
-  color: black;
+  color: #ffe589;
+
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color:#686046;
-  color: white;
+  background-color:#ffe589;
+  color: black ;
 }
   </style>
   

@@ -21,11 +21,11 @@
 
     {#each frameworks as { name, color, surveys }}
         <!-- Framework name on the left side -->
-        <div class="framework-name" style="color: {color};">{name}</div>
+        <div class="framework-name" data-cy="chart-data-cell" style="color: {color};">{name}</div>
       {#each years as year}
       {#if surveys.find(s => s.year === year)}
       <div class="data-cell" data-cy="chart-data-cell" style="background-color: transparent;">
-        <div class="circle" data-cy="chart-circle" style="background-color: {color}; --circle-size: 50px;">
+        <div class="circle" data-cy="chart-circle" style=" --circle-size: 50px; border-color: {color}">
           {surveys.find(s => s.year === year)?.retention}%
         </div>
       </div>
@@ -34,7 +34,7 @@
     {/if}
       {/each}
         <!-- Framework name on the right side -->
-        <div class="framework-name" style="color: {color};">{name}</div>
+        <div class="framework-name" data-cy="chart-data-cell" style="color: {color};">{name}</div>
     {/each}
 </div>
 </div>
@@ -48,11 +48,12 @@
   }
   .chart-container {
     padding-top: 20px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: auto repeat(var(--num-years), 100px) auto;
     gap: 10px;
     align-items: center;
-    background: #161515;
+    background: #1f1e1e;
     color: white;
     width: 80%;
     margin: auto;
@@ -60,12 +61,15 @@
     overflow-y: hidden; /* Prevent vertical scrolling */
   }
 
-  .header-cell, .framework-name, .data-cell, .empty-cell {
+  .header-cell, .framework-name, .data-cell {
     text-align: center;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .header-cell {
+    padding: 10px 0;
   }
   .framework-name {
     padding: 0 5px; 
@@ -75,8 +79,12 @@
     margin: auto;
     text-align: center;
   }
+  .empty-cell {
+    width: 80px;
+    height: 50px;
+  }
 
-  .data-cell, .empty-cell {
+  .data-cell {
     min-width: 80px; 
   }
   .circle {
@@ -88,6 +96,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid 2px red;
   }
 
   /* Responsive adjustments for smaller screens */
