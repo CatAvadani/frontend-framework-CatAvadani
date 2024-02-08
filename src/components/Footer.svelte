@@ -31,22 +31,23 @@
   grid-column: 1 / -1; /* Span across all columns */
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin: 20px auto;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 5px 8px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: white;
+  background-color: #ffe589;
+  color: black;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color:#686046;
+  color: white;
 }
   </style>
   

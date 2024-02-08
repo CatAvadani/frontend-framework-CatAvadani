@@ -10,10 +10,17 @@
     }
   
     h1 {
-      color: white;
+      color: #ffe589;
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
   
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
     }
   
   </style>
