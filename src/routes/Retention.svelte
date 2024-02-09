@@ -1,9 +1,9 @@
 <script>
     import Chart from "../components/Chart.svelte";
-  </script>
+</script>
   
  
-  <main>
+<main>
     <Chart selector = "retention"/>
-  </main>
+</main>
   
