@@ -3,10 +3,13 @@
 
     const years = [...new Set(frameworks.flatMap(f => f.surveys.map(s => s.year)))].sort((a, b) => a - b);
 
- function handleButtonClick(metric: string) {
-        console.log('Button clicked');
-        //todo: add logic to filter or display data based on the selected metric
+  
+    export let selector: string;
+
+    function getSelector(survey: any, selector: any): number {
+        return survey[selector];
     }
+
 </script>
 
 <div class="scrollable-container">
@@ -22,11 +25,14 @@
     {#each frameworks as { name, color, surveys }}
         <!-- Framework name on the left side -->
         <div class="framework-name" data-cy="chart-data-cell" style="color: {color};">{name}</div>
-      {#each years as year}
+      {#each years as year, i}
       {#if surveys.find(s => s.year === year)}
       <div class="data-cell" data-cy="chart-data-cell" style="background-color: transparent;">
         <div class="circle" data-cy="chart-circle" style=" --circle-size: 50px; border-color: {color}">
-          {surveys.find(s => s.year === year)?.retention}%
+          <!-- {surveys.find(s => s.year === year)?.retention}% -->
+
+          {getSelector(surveys.find(s => s.year === year), selector)}%
+          
         </div>
       </div>
     {:else}
