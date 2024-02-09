@@ -1,11 +1,8 @@
 <script>
-    // Import the Chart component
     import Chart from "../components/Chart.svelte";
-  </script>
-  
+</script>
 
-  
-  <main>
- <Chart selector = "awareness"/>
-  </main>
+<main>
+   <Chart selector = "awareness"/>
+</main>
   

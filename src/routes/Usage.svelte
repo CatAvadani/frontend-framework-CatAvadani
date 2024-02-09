@@ -1,8 +1,8 @@
 <script>
     import Chart from "../components/Chart.svelte";
-  </script>
+</script>
   
  
-  <main>
-    <Chart selector = "usage"/>
-  </main>
+<main>
+   <Chart selector = "usage"/>
+</main>
