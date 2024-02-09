@@ -1,4 +1,10 @@
-<style>
+
+  
+  <header>
+    <h1>State of Javascript</h1>
+  </header>
+
+  <style>
     header {
       width: 100%;
       height: 6rem;
@@ -24,9 +30,3 @@
     }
   
   </style>
-  
-  <header>
-    <h1>State of Javascript</h1>
-  </header>
-
-  
