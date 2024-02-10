@@ -5,6 +5,7 @@
 
   
     export let selector: string;
+  
 
     function getSelector(survey: any, selector: any): number {
         return survey[selector];
@@ -32,8 +33,10 @@
           <!-- {surveys.find(s => s.year === year)?.retention}% -->
 
           {getSelector(surveys.find(s => s.year === year), selector)}%
-          
-        </div>
+           </div>
+           {#if i < years.length - 1}
+           <div class="horizontal-line" style="background-color: {color};"></div> 
+         {/if}
       </div>
     {:else}
       <div class="empty-cell" data-cy="chart-data-cell"></div>
@@ -91,9 +94,19 @@
   }
 
   .data-cell {
-    min-width: 80px; 
-  }
-  .circle {
+    position: relative;
+  } 
+.horizontal-line {
+  position: absolute;
+  top: 50%;
+  height: 4px; 
+  width: 100%; 
+  transform: translateY(-50%);
+  z-index: 1; 
+}
+ .circle {
+    position: relative;
+    background-color: #1f1e1e;
     border-radius: 50%;
     font-size: 0.75rem;
     width: var(--circle-size);
@@ -102,7 +115,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2px red;
+    border: solid 4px;
+    z-index: 2;
+  }
+  .circle + .horizontal-line {
+  flex-grow: 1; 
+  margin-left: 50%; 
+  margin-right: -50%; 
+
   }
 
   /* Responsive adjustments for smaller screens */

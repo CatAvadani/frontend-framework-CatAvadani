@@ -1,16 +1,15 @@
 <!-- Footer.svelte -->
 <script lang="ts">
   const currentYear = new Date().getFullYear();
-   </script>
+ </script>
 
-<footer>
+<footer>        
           <!-- Button container -->
 <div class="button-container">
   <a href="/retention" class="button">Retention</a>
   <a href="/interest" class="button">Interest</a>
   <a href="/usage" class="button">Usage</a>
   <a href="/awareness" class="button">Awareness</a>
-  
 </div>
     <p>© <span>{currentYear}</span> Frameworks App, Inc</p>
   </footer>
