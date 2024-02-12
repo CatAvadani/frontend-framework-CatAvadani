@@ -1,12 +1,13 @@
 <script lang="ts">
     import { frameworks } from '../frameworksData/frameworks.js';
 
-    const years = [...new Set(frameworks.flatMap(f => f.surveys.map(s => s.year)))].sort((a, b) => a - b);
+    // Extract unique years from the frameworks data and sorting them
+    const years = [...new Set(frameworks.flatMap(framework => framework.surveys.map(survey => survey.year)))].sort((a, b) => a - b);
 
-  
+    // This is a prop that will be passed to specify which survey data to display
     export let selector: string;
   
-
+   // Extract a specific selector's value from a survey,retention, interest, usage or awareness
     function getSelector(survey: any, selector: any): number {
         return survey[selector];
     }
@@ -17,23 +18,25 @@
   <div class="chart-container" data-cy="chart" style="--num-years: {years.length};">
     <!-- Empty cell -->
     <div class="header-cell" data-cy="chart-header-cell"></div>
+    <!-- Loop through each year and display it as a header cell -->
     {#each years as year}
       <div class="header-cell" data-cy="chart-header-cell">{year}</div>
     {/each}
     <!-- Empty cell -->
     <div class="header-cell" data-cy="chart-header-cell"></div>
-
+   <!-- Loop through each framework to display its name, data cells for each year  -->
     {#each frameworks as { name, color, surveys }}
         <!-- Framework name on the left side -->
         <div class="framework-name" data-cy="chart-data-cell" style="color: {color};">{name}</div>
       {#each years as year, i}
-      {#if surveys.find(s => s.year === year)}
+      {#if surveys.find(survey => survey.year === year)}
       <div class="data-cell" data-cy="chart-data-cell" style="background-color: transparent;">
         <div class="circle" data-cy="chart-circle" style=" --circle-size: 50px; border-color: {color}">
           <!-- {surveys.find(s => s.year === year)?.retention}% -->
 
-          {getSelector(surveys.find(s => s.year === year), selector)}%
+          {getSelector(surveys.find(survey => survey.year === year), selector)}%
            </div>
+           <!-- Add a horizontal line to connect circles -->
            {#if i < years.length - 1}
            <div class="horizontal-line" style="background-color: {color};"></div> 
          {/if}
