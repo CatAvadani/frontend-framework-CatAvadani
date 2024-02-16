@@ -70,7 +70,6 @@
     color: white;
     margin: auto;
     width: 90%;
-    overflow-x: auto;
   }
 
   .header-cell, .framework-name, .data-cell {
