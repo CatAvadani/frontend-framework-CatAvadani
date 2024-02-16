@@ -13,9 +13,9 @@
     }
 
 </script>
-
-<div class="scrollable-container">
-  <div class="chart-container" data-cy="chart" style="--num-years: {years.length};">
+<main class="main-content">
+<div class="scrollable-container" data-cy="chart">
+  <div class="chart-container"  style="--num-years: {years.length};">
     <!-- Empty cell -->
     <div class="header-cell" data-cy="chart-header-cell"></div>
     <!-- Loop through each year and display it as a header cell -->
@@ -51,26 +51,34 @@
 </div>
 </div>
 
-
+</main>
 
 <style>
   .scrollable-container {
+    width: 100%;
     margin: auto;
     overflow-x: auto;
   }
+
+  .main-content {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
   .chart-container {
     padding-top: 20px;
     padding-bottom: 20px;
     display: grid;
-    grid-template-columns: auto repeat(var(--num-years), 100px) auto;
-    gap: 10px;
+    /* grid-template-columns: auto repeat(7, 100px) auto; */
+  grid-template-columns: auto repeat(7, minmax(0, 1fr)) auto;
+    gap: 5px;
     align-items: center;
+    min-width: max-content;
     background: #1f1e1e;
     color: white;
-    width: 80%;
     margin: auto;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
+    width: 80%;
   }
 
   .header-cell, .framework-name, .data-cell {
@@ -79,6 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   .header-cell {
     padding: 10px 0;
@@ -129,12 +138,14 @@
   }
 
   /* Responsive adjustments for smaller screens */
+
+/*   
   @media (max-width: 768px) {
     .chart-container {
-      grid-template-columns: auto repeat(var(--num-years), 70px) auto; 
+      grid-template-columns: auto repeat(var(--num-years), 50px) auto; 
     }
     .circle {
-      --circle-size: 40px; 
+      --circle-size: 30px; 
     }
   }
 
@@ -149,5 +160,5 @@
     .circle {
       --circle-size: 30px; 
     }
-  }
+  } */
 </style>

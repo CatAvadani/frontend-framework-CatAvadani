@@ -16,10 +16,11 @@
   
   <style>
     footer {
-      padding: 10px;
+      padding: 10px 0;
       background-color: black;
       color: white;
       text-align: center;
+      margin:0;
     
     }
 
@@ -37,7 +38,7 @@ a {
 }
 
 .button {
-  padding: 5px 8px;
+  padding: 4px ;
   border: solid 1px  #ffe589;
   border-radius: 5px;
   color: #ffe589;

@@ -6,7 +6,9 @@
 
   <style>
     header {
-      width: 100%;
+      margin:0;
+      padding: 0; 
+      width: auto;
       height: 6rem;
       background-color: black;
       display: flex;
@@ -19,12 +21,12 @@
       color: #ffe589;
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-  
+      padding: 0;
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
       
     }
