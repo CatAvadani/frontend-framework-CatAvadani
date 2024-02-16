@@ -1,3 +1,38 @@
+Description
+
+This project is a simplified version of the site inspired by stateofjs.com, built using Svelte, Vite, and TypeScript. It showcases a dynamic and interactive chart representing various framework usage statistics over the years. The application is structured to offer a responsive, user-friendly experience with client-side routing to navigate between different data visualizations: Retention, Interest, Usage, and Awareness.
+
+Installation & Development
+
+1. Clone the repository
+   git clone https://github.com/plugga-tech/frontend-framework-CatAvadani.git
+   cd <project-directory>
+2. Initialize the project with Vite using Svelt and TypeScript.
+   npm init vite@latest .
+   Follow the prompts to complete the setup.
+
+Running the Project
+
+To start the development server, run:
+npm run dev
+
+Project Structure
+
+The project is organized into several key directories and files:
+
+src/main.ts - The entry point for the Vite application, setting up the Svelte app.
+src/App.svelte - The main application component, including the router setup and primary layout (Header and Footer).
+src/components/ - This directory contains reusable Svelte components
+Footer.svelte - Displays the application's footer, including navigation links.
+Header.svelte - Displays the application's header.
+Chart.svelte - A component that renders the dynamic charts based on the framework data.
+src/routes/ - Contains the Svelte files for each route in the application:
+Awareness.svelte
+Interest.svelte
+Retention.svelte
+Usage.svelte
+src/frameworksData/ - Includes the frameworks.js file that stores the data used to generate the charts.
+
 # Svelte + TS + Vite
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
@@ -42,6 +77,6 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
