@@ -21,8 +21,6 @@
       color: white;
       text-align: center;
       margin:0;
-    border: solid 3px #ed0e0e;
-
     
     }
 
@@ -35,7 +33,7 @@ a {
   grid-column: 1 / -1; /* Span across all columns */
   display: flex;
   justify-content: center;
-  gap: 0;
+  gap: 4px;
   margin: 15px auto;
 }
 

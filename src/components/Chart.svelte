@@ -58,15 +58,12 @@
     width: 100%;
     margin: auto;
     overflow-x: auto;
-    border: solid 3px #ed0e0e;
   }
 
   .main-content {
   display: flex;
   justify-content: center;
-  padding: 20px;
-  border: solid 3px #ed0e0e;
-
+  padding: 20px 0;
 }
 
   .chart-container {
@@ -82,8 +79,6 @@
     color: white;
     margin: auto;
     width: 80%;
-    border: solid 3px #ed0e0e;
-
   }
 
   .header-cell, .framework-name, .data-cell {
@@ -92,7 +87,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 3px #ed0e0e;
 
   }
   .header-cell {
