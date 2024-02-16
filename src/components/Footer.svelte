@@ -16,10 +16,11 @@
   
   <style>
     footer {
-      padding: 10px;
+      padding: 10px 0;
       background-color: black;
       color: white;
       text-align: center;
+      margin:0;
     
     }
 
@@ -32,12 +33,12 @@ a {
   grid-column: 1 / -1; /* Span across all columns */
   display: flex;
   justify-content: center;
-  gap: 4px;
+  gap: 0;
   margin: 15px auto;
 }
 
 .button {
-  padding: 5px 8px;
+  padding: 4px ;
   border: solid 1px  #ffe589;
   border-radius: 5px;
   color: #ffe589;

@@ -6,6 +6,7 @@
 
   <style>
     header {
+      margin:0;
       width: 100%;
       height: 6rem;
       background-color: black;
