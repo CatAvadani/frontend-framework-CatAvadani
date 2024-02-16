@@ -14,8 +14,8 @@
 
 </script>
 
-<div class="scrollable-container">
-  <div class="chart-container" data-cy="chart" style="--num-years: {years.length};">
+<!-- <div class="scrollable-container"> -->
+  <div class="chart-container scrollable-container" data-cy="chart" style="--num-years: {years.length};">
     <!-- Empty cell -->
     <div class="header-cell" data-cy="chart-header-cell"></div>
     <!-- Loop through each year and display it as a header cell -->
@@ -49,12 +49,13 @@
         <div class="framework-name" data-cy="chart-data-cell" style="color: {color};">{name}</div>
     {/each}
 </div>
-</div>
+<!-- </div> -->
 
 
 
 <style>
   .scrollable-container {
+    width: 100%;
     margin: auto;
     overflow-x: auto;
   }
@@ -63,14 +64,13 @@
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: auto repeat(var(--num-years), 100px) auto;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
     background: #1f1e1e;
     color: white;
-    width: 80%;
     margin: auto;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
+    width: 90%;
+    overflow-x: auto;
   }
 
   .header-cell, .framework-name, .data-cell {
