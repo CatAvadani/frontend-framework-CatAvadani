@@ -16,7 +16,7 @@
   
   <style>
     footer {
-      padding: 20px;
+      padding: 10px;
       background-color: black;
       color: white;
       text-align: center;
@@ -32,7 +32,7 @@ a {
   grid-column: 1 / -1; /* Span across all columns */
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
   margin: 20px auto;
 }
 
