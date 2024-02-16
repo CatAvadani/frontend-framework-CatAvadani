@@ -140,7 +140,7 @@
 
   @media (max-width: 480px) {
     .chart-container {
-      padding: 7px; 
+      padding: 7px 4px; 
     }
 
     .framework-name, .header-cell, .data-cell, .circle {

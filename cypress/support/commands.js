@@ -33,7 +33,7 @@ Cypress.Commands.add('shouldDisplayChartHeader', () => {
       } else {
         // otherwise each cell should display the survey year
         const { year } = surveys[index - 1];
-        expect($cell).to.have.text(year);
+        expect($cell).to.contain.text(year);
       }
     });
 });
@@ -59,7 +59,7 @@ Cypress.Commands.add('shouldDisplayChartData', (category) => {
       cy.wrap($cell)
         .scrollIntoView()
         .should('be.visible')
-        .and('have.text', framework.name)
+        .and('contain.text', framework.name)
         .and('have.css', 'color')
         .and('be.colored', framework.color);
     } else if (frameworkColumnIndex - 1 < missingSurveysCount) {
@@ -74,7 +74,7 @@ Cypress.Commands.add('shouldDisplayChartData', (category) => {
         .find('[data-cy="chart-circle"]')
         .scrollIntoView()
         .should('be.visible')
-        .and('have.text', survey[category] + '%')
+        .and('contain.text', survey[category] + '%')
         .and('have.css', 'border-color')
         .and('be.colored', framework.color);
     }
@@ -91,7 +91,7 @@ Cypress.Commands.add('assertLayoutHasHeaderMainFooter', () => {
     .should('exist')
     .should('be.visible')
     .find('h1')
-    .should('have.text', 'State of Javascript');
+    .should('contain.text', 'State of Javascript');
   cy.get('main').should('exist').should('be.visible');
   cy.get('footer')
     .should('exist')

@@ -11,12 +11,12 @@
   <a href="/usage" class="button">Usage</a>
   <a href="/awareness" class="button">Awareness</a>
 </div>
-    <p>© <span>{currentYear}</span> Frameworks MyApp. All Rights Reserved.</p>
+    <p>© <span>{currentYear}</span> Frameworks MyApp</p>
   </footer>
   
   <style>
     footer {
-      padding: 20px;
+      padding: 10px;
       background-color: black;
       color: white;
       text-align: center;
@@ -32,8 +32,8 @@ a {
   grid-column: 1 / -1; /* Span across all columns */
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin: 20px auto;
+  gap: 4px;
+  margin: 15px auto;
 }
 
 .button {
