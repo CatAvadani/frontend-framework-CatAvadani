@@ -33,7 +33,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 4px;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 .button {
