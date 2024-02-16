@@ -7,12 +7,15 @@
   <style>
     header {
       margin:0;
-      width: 100%;
+      padding: 0; 
+      width: auto;
       height: 6rem;
       background-color: black;
       display: flex;
       justify-content: center;
       align-items: center;
+    border: solid 5px #ed0e0e;
+
   
     }
   

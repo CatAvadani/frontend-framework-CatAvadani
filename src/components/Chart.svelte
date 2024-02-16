@@ -58,12 +58,15 @@
     width: 100%;
     margin: auto;
     overflow-x: auto;
+    border: solid 3px #ed0e0e;
   }
 
   .main-content {
   display: flex;
   justify-content: center;
   padding: 20px;
+  border: solid 3px #ed0e0e;
+
 }
 
   .chart-container {
@@ -72,14 +75,15 @@
     display: grid;
     /* grid-template-columns: auto repeat(7, 100px) auto; */
   grid-template-columns: auto repeat(7, minmax(0, 1fr)) auto;
-
     gap: 5px;
     align-items: center;
     min-width: max-content;
-    /* background: #1f1e1e; */
+    background: #1f1e1e;
     color: white;
     margin: auto;
     width: 80%;
+    border: solid 3px #ed0e0e;
+
   }
 
   .header-cell, .framework-name, .data-cell {
@@ -88,6 +92,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid 3px #ed0e0e;
+
   }
   .header-cell {
     padding: 10px 0;

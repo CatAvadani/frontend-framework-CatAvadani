@@ -21,6 +21,8 @@
       color: white;
       text-align: center;
       margin:0;
+    border: solid 3px #ed0e0e;
+
     
     }
 
