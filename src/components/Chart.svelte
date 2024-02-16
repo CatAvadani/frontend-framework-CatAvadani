@@ -14,8 +14,8 @@
 
 </script>
 
-<!-- <div class="scrollable-container"> -->
-  <div class="chart-container scrollable-container" data-cy="chart" style="--num-years: {years.length};">
+<div class="scrollable-container" data-cy="chart">
+  <div class="chart-container"  style="--num-years: {years.length};">
     <!-- Empty cell -->
     <div class="header-cell" data-cy="chart-header-cell"></div>
     <!-- Loop through each year and display it as a header cell -->
@@ -49,7 +49,7 @@
         <div class="framework-name" data-cy="chart-data-cell" style="color: {color};">{name}</div>
     {/each}
 </div>
-<!-- </div> -->
+</div>
 
 
 
