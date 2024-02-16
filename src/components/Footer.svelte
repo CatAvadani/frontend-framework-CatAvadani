@@ -11,7 +11,7 @@
   <a href="/usage" class="button">Usage</a>
   <a href="/awareness" class="button">Awareness</a>
 </div>
-    <p>© <span>{currentYear}</span> Frameworks App, Inc</p>
+    <p>© <span>{currentYear}</span> Frameworks MyApp. All Rights Reserved.</p>
   </footer>
   
   <style>
