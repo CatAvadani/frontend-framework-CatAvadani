@@ -13,7 +13,7 @@
     }
 
 </script>
-
+<main class="main-content">
 <div class="scrollable-container" data-cy="chart">
   <div class="chart-container"  style="--num-years: {years.length};">
     <!-- Empty cell -->
@@ -50,6 +50,7 @@
     {/each}
 </div>
 </div>
+</main>
 
 
 
@@ -59,6 +60,11 @@
     margin: auto;
     overflow-x: auto;
   }
+  .main-content {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
   .chart-container {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -66,10 +72,10 @@
     grid-template-columns: auto repeat(var(--num-years), 100px) auto;
     gap: 5px;
     align-items: center;
-    background: #1f1e1e;
+    /* background: #1f1e1e; */
     color: white;
     margin: auto;
-    width: 90%;
+    width: 80%;
   }
 
   .header-cell, .framework-name, .data-cell {
